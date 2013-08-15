@@ -64,8 +64,13 @@ class MoviesController < ApplicationController
     redirect_to movies_path
   end
 
-  def find_with_same_director
-    Movie.find_by_director(params[:director])
+  def find_similar
+    if params.has_key? :director and !params[:director].is_empty?
+      @movies = Movie.find_similar( :director => params[:director])
+      redirect_to similar_movies_path
+    end
+    flash[:notice] = "not found"
+    redirect_to movies_path
   end
 
 end

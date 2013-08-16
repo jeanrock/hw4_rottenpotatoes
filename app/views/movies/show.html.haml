@@ -10,7 +10,7 @@
     Released on:
     = @movie.release_date.strftime("%B %d, %Y")
   %li
-    Director
+    Director:
     = @movie.director
 
 %h3 Description:
@@ -18,5 +18,6 @@
 
 
 = link_to 'Edit', edit_movie_path(@movie)
+= link_to 'Find Movies With Same Director', :method => :find_similar , :director => @movie.director
 = button_to 'Delete', movie_path(@movie), :method => :delete, :confirm => 'Are you sure?'
 = link_to 'Back to movie list', movies_path

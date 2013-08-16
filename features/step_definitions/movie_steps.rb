@@ -32,3 +32,19 @@ Then /I should see all of the movies/ do
     step(%{I should see "#{m.title}"})
   end
 end
+
+Then /^the director of "([^"]*)" should be "([^"]*)"$/ do |arg1, arg2|
+  step(%{I should see "Director: #{arg2}"})
+end
+
+
+
+
+
+
+
+
+
+
+
+

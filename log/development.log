@@ -662,3 +662,222 @@ Migrating to CreateMovies (20111119180638)
   [1m[36m (0.1ms)[0m  [1mSELECT version FROM "schema_migrations"[0m
   [1m[35m (6.4ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20130813023509')
   [1m[36m (5.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20111119180638')[0m
+
+
+Started GET "/movies" for 127.0.0.1 at 2013-08-16 12:45:34 -0300
+  Processing by MoviesController#index as HTML
+  [1m[36mMovie Load (17.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."rating" IN ('G', 'PG', 'PG-13', 'NC-17', 'R')[0m
+Rendered movies/index.html.haml within layouts/application (24.7ms)
+Compiled application.css  (2ms)  (pid 5469)
+Compiled application.js  (31ms)  (pid 5469)
+Compiled jquery.js  (32ms)  (pid 5469)
+Compiled jquery_ujs.js  (18ms)  (pid 5469)
+Completed 200 OK in 297ms (Views: 240.9ms | ActiveRecord: 17.5ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:36 -0300
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:36 -0300
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:36 -0300
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:36 -0300
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/movies/31" for 127.0.0.1 at 2013-08-16 12:45:41 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"id"=>"31"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (19.6ms)
+Completed 200 OK in 33ms (Views: 29.0ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:42 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:42 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:42 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:42 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:44 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (7.9ms)
+Completed 200 OK in 20ms (Views: 16.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:44 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:44 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:44 -0300
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:44 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:48 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[35mMovie Load (0.3ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (12.1ms)
+Completed 200 OK in 21ms (Views: 18.9ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:48 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:48 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:48 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:48 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:49 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[36mMovie Load (0.2ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (74.9ms)
+Completed 200 OK in 88ms (Views: 84.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:49 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:49 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:49 -0300
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:49 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:50 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[35mMovie Load (0.4ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (20.2ms)
+Completed 200 OK in 42ms (Views: 36.8ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:50 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:50 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:50 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:50 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:51 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[36mMovie Load (0.5ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 41ms (Views: 35.5ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:51 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:51 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:51 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:51 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:45:52 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[35mMovie Load (0.2ms)[0m  SELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (60.0ms)
+Completed 200 OK in 70ms (Views: 67.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:52 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:52 -0300
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:45:52 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:45:52 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/movies/31?director=walt+disney&method=find_similar" for 127.0.0.1 at 2013-08-16 12:46:27 -0300
+  Processing by MoviesController#show as HTML
+  Parameters: {"director"=>"walt disney", "method"=>"find_similar", "id"=>"31"}
+  [1m[36mMovie Load (0.3ms)[0m  [1mSELECT "movies".* FROM "movies" WHERE "movies"."id" = ? LIMIT 1[0m  [["id", "31"]]
+Rendered movies/show.html.haml within layouts/application (15.3ms)
+Completed 200 OK in 29ms (Views: 25.3ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2013-08-16 12:46:27 -0300
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2013-08-16 12:46:27 -0300
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2013-08-16 12:46:27 -0300
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2013-08-16 12:46:27 -0300
+Served asset /application.js - 304 Not Modified (0ms)
